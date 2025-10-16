@@ -1,0 +1,10 @@
+#!name=RoPhim App Modifier
+#!desc=Plugin để xử lý các yêu cầu api của ứng dụng RoPhim (RoTeam)
+#!author=dabeecao & hscavn & chatgpt
+#!url=https://api.dabeecao.org/data/shadowrocket/module/rpx.module
+
+[Script]
+http-response ^https?:\/\/api\.rofilm\.net\/api\/app\/v1\/(?:auth\/(?:register|login)|user\/info)$ script-path=https://api.dabeecao.org/data/scripts/rphimx.js, requires-body=true, max-size=-1
+
+[MITM]
+hostname = api.rofilm.net
